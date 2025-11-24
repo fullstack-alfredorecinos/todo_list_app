@@ -17,4 +17,6 @@
 -Estructura de carpetas: controllers, routes, services, test
 -Archivo principal app.js
 -node test/test.js | comando para ejecutar el script del test y para ejecutar pruebas unitarias con una librería de pruebas
--
+-app.js | configurando servidor de express
+-Instalar postman para trabajar con peticiones HTTP
+
