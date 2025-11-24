@@ -14,11 +14,24 @@
     "Capas",
     "JWT"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullstack-alfredorecinos/todo_list_app.git"
+  },
   "license": "MIT",
   "author": "Alfredo Recinos, grupo Full Stack 21 - Profesor Jhon Mendez",
   "type": "module",
   "main": "app.js",
   "scripts": {
-    "test": "test"
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "node test/test.js",
+    "build": "tsc"
+
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.11"
   }
 }
