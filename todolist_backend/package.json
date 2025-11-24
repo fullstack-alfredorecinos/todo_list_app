@@ -1,0 +1,24 @@
+{
+  "name": "todolist_backend",
+  "version": "1.0.0",
+  "description": "todo list app fullstack 21",
+  "keywords": [
+    "Node",
+    "Js",
+    "Mongo",
+    "DB",
+    "Prisma",
+    "Express",
+    "React",
+    "App",
+    "Capas",
+    "JWT"
+  ],
+  "license": "MIT",
+  "author": "Alfredo Recinos, grupo Full Stack 21 - Profesor Jhon Mendez",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  }
+}
