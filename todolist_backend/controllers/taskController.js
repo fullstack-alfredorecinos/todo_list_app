@@ -1,23 +1,7 @@
 import taskService from "../services/taskService.js";
 
-const tasks = [
-    {
-    id: 1,
-    name: "Task 1",
-    description: "This is task 1",
-    completed: false
-    },
-    {
-    id: 2,
-    name: "Task 2",
-    description: "This is task 2",
-    completed: false
-    }
-
-]
-
 const getTasks = (req, res) =>{
-    const data = tasks;
+    const data = taskService.getTask();
     res.status(200).json({
         message: "List Task",
         data: data,
@@ -25,28 +9,24 @@ const getTasks = (req, res) =>{
 }
 
 const creatTasks = (req, res) =>{
-    // console.log(req.body);
-    const data = req.body;
-    tasks.push(data);
+    const body = req.body;
+    const data = taskService.creatTask(body);
     res.status(201).json({message: "Task created", data: data});
     // res.json(data);
 }
 
 const updateTasks = (req, res) =>{
-    const data = req.body;
+    const body = req.body;
     const id = req.params.id;
-    console.log(req);
-    console.log(data);
-    console.log(id);
-    // const data = tasks;
-    // res.json(data);
+    const data = taskService.updateTask(id, body);
+    res.status(200).json({message: "Task updated", data: data});
+
 }
 
 const deleteTasks = (req, res) =>{
     const id = req.params.id;
-    console.log(id);
-    // const data = tasks;
-    // res.json(data);
+    const data = taskService.deleteTask(id);
+    res.status(200).json({message: "Task deleted", data: data});
 }
 
 export default {
@@ -55,35 +35,3 @@ export default {
     updateTasks,
     deleteTasks
 }
-
-// const obtenerLibro = async (req, res) =>{
-//     const datos = await libroServicio.obtenerLibro();
-//     res.json(datos);
-// };
-
-// const crearLibro = async (req, res) => {
-//     const body = req.body;
-//     const datos = await libroServicio.crearLibro(body);
-//     res.json(datos);
-// };
-
-// const actualizarLibro = async (req, res) => {
-//     const body = req.body;
-//     const id = req.params.id;
-//     const datos = await libroServicio.actualizarLibro(body, id);
-//     res.json(datos);
-// };
-
-// const eliminarLibro = async (req, res) => {
-//     const id = req.params.id;
-//     const datos = await libroServicio.eliminarLibro(id);
-//     res.json(datos);
-// }
-
-// export default {
-//     obtenerLibro,
-//     crearLibro,
-//     actualizarLibro,
-//     eliminarLibro
-// };
-

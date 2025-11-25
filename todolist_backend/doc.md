@@ -11,6 +11,15 @@
 -npm install express --save | Instalar Express
 -npm install dotenv  | Instalar dot environment
 -npm install nodemon
+-npm install --save-dev prisma@6.2.1
+-npm install@prisma/client@6.2.1
+-npx prisma init
+-npx prisma migrate dev --name init
+-npx prisma studio
+-npx prisma generate
+-
+
+
 
 
 ### Estructura principal del proyecto Backend
@@ -32,3 +41,5 @@
 
 
 
+https://www.youtube.com/watch?v=VDVoZhpozRw
+Minuto 46:49
