@@ -19,4 +19,16 @@
 -node test/test.js | comando para ejecutar el script del test y para ejecutar pruebas unitarias con una librería de pruebas
 -app.js | configurando servidor de express
 -Instalar postman para trabajar con peticiones HTTP
+-Configurar los middlewares json y routes en archivo app.js
+-Middleware:  req, res y next | Recibe la solicitud, envía una respuesta y el next autoriza para que la solicitud siga adelante
+
+#### Comandos Mongo
+-show dbs - Muestras las bases de datos que tenemos
+-show collections - Muestra las colecciones que tenemos
+-use dbName - para usar una base de datos
+
+##### LINKS
+-https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status
+
+
 
