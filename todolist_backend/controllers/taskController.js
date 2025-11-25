@@ -1,4 +1,5 @@
-// import libroServicio from "../services/taskServicio.js";
+import taskService from "../services/taskService.js";
+
 const tasks = [
     {
     id: 1,
