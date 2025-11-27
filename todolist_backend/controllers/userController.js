@@ -1,7 +1,7 @@
 import userService from "../services/userService.js";
 
-const getUsers = (req, res) =>{
-    const data = users;
+const getUsers = async(req, res) =>{
+    const data = await userService.getUser();
     res.status(200).json({
         message: "List user",
         data: data,
@@ -25,28 +25,30 @@ const creatUsers = async(req, res) =>{
 }
 
 const updateUsers = async(req, res) =>{
-    const data = req.body;
+    const body = req.body;
     const id = req.params.id;
-    console.log(req);
-    console.log(data);
-    console.log(id);
-    // const data = users;
-    // res.json(data);
+    const data = await userService.updateUser(body, id);
+    res.status(201).json({message: "Users updated", data: data});
 }
 
 const deleteUsers = async(req, res) =>{
     const id = req.params.id;
-    console.log(id);
-    // const data = users;
-    // res.json(data);
+    const data = await userService.deleteUser(id);
+    res.status(201).json({message: "Users deleted", data: data});
 }
 
-// function login(){}
-// function logOut(){}
+const login = async(req, res) =>{
+    const body = req.body;
+    // console.log(body);
+    const data = await userService.login(body);
+    res.status(200).json(data);
+}
+function logOut(){}
 
 export default {
     getUsers,
     creatUsers,
     updateUsers,
-    deleteUsers
+    deleteUsers,
+    login
 }

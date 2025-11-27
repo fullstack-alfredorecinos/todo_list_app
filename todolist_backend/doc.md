@@ -40,3 +40,5 @@
 ##### LINKS
 -https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status
 -https://swagger.io/
+-JWT Encoder(elegir esta opción para probar) | https://www.jwt.io/
+-https://www.npmjs.com/package/jsonwebtoken
