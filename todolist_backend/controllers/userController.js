@@ -1,6 +1,4 @@
-// import libroServicio from "../services/taskServicio.js";
-
-import userService from "../services/userService";
+import userService from "../services/userService.js";
 
 const getUsers = (req, res) =>{
     const data = users;
@@ -23,9 +21,10 @@ const creatUsers = async(req, res) =>{
     const body = req.body;
     const data = await userService.creatUser(body);
     res.status(201).json({message: "user created", data: data});
+
 }
 
-const updateUsers = (req, res) =>{
+const updateUsers = async(req, res) =>{
     const data = req.body;
     const id = req.params.id;
     console.log(req);
@@ -35,7 +34,7 @@ const updateUsers = (req, res) =>{
     // res.json(data);
 }
 
-const deleteUsers = (req, res) =>{
+const deleteUsers = async(req, res) =>{
     const id = req.params.id;
     console.log(id);
     // const data = users;

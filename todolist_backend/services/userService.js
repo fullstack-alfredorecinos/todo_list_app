@@ -9,9 +9,8 @@ const creatUser = async(body) =>{
     const data = await prisma.user.create({
         data: {
             name: body.name,
-            status: false,
-            dueDate: body.dueDate,
-            userId: body.userId
+            email: body.email,
+            password: body.password,
         }
     });
     return data;
