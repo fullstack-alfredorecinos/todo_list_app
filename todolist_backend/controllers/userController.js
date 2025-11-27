@@ -1,19 +1,6 @@
 // import libroServicio from "../services/taskServicio.js";
-const users = [
-    {
-    id: 1,
-    name: "user 1",
-    description: "This is user 1",
-    completed: false
-    },
-    {
-    id: 2,
-    name: "user 2",
-    description: "This is user 2",
-    completed: false
-    }
 
-]
+import userService from "../services/userService";
 
 const getUsers = (req, res) =>{
     const data = users;
@@ -23,12 +10,19 @@ const getUsers = (req, res) =>{
     });
 }
 
-const creatUsers = (req, res) =>{
-    // console.log(req.body);
-    const data = req.body;
-    users.push(data);
+/**
+ * CREAR USUARIOS
+ {
+"name": "{{$randomFullName}}",
+"email": "{{$randomEmail}}",
+"password": "123"
+}
+ */
+
+const creatUsers = async(req, res) =>{
+    const body = req.body;
+    const data = await userService.creatUser(body);
     res.status(201).json({message: "user created", data: data});
-    // res.json(data);
 }
 
 const updateUsers = (req, res) =>{
@@ -48,8 +42,8 @@ const deleteUsers = (req, res) =>{
     // res.json(data);
 }
 
-function login(){}
-function logOut(){}
+// function login(){}
+// function logOut(){}
 
 export default {
     getUsers,

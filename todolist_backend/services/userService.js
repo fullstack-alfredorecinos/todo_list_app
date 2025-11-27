@@ -1,25 +1,35 @@
+import { PrismaClient } from "@prisma/client";
+const prisma = new PrismaClient();
 
 const getUser = () =>{
 
 }
 
-const creatUser = () =>{
+const creatUser = async(body) =>{
+    const data = await prisma.user.create({
+        data: {
+            name: body.name,
+            status: false,
+            dueDate: body.dueDate,
+            userId: body.userId
+        }
+    });
+    return data;
+}
+
+const updateUser = async() =>{
 
 }
 
-const updateUser = () =>{
+const deleteUser = async() =>{
 
 }
 
-const deleteUser = () =>{
+const login = async() =>{
 
 }
 
-const login = () =>{
-
-}
-
-const logOut = () =>{
+const logOut = async() =>{
 
 }
 

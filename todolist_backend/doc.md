@@ -17,6 +17,7 @@
 -npx prisma migrate dev --name init
 -npx prisma studio
 -npx prisma generate
+-npx prisma push
 -
 
 
@@ -38,8 +39,4 @@
 
 ##### LINKS
 -https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status
-
-
-
-https://www.youtube.com/watch?v=VDVoZhpozRw
-Minuto 46:49
+-https://swagger.io/
