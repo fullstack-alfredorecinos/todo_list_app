@@ -5,7 +5,7 @@ import validate from "../midlewares/validate.js";
 
 const router = Router();
 
-// router.use(validate.validateRequest); //Middleware de la aplicación o policía que proteje las rutas
+router.use(validate.validateRequest); //Middleware de la aplicación o policía que proteje todas las rutas
 
 router.get("/", taskController.getTasks);
 router.post("/", taskController.creatTasks);

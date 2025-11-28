@@ -42,3 +42,6 @@
 -https://swagger.io/
 -JWT Encoder(elegir esta opción para probar) | https://www.jwt.io/
 -https://www.npmjs.com/package/jsonwebtoken
+-Headers https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers
+-Esquemas de autenticación | https://developer.mozilla.org/es/docs/Web/HTTP/Guides/Authentication
+

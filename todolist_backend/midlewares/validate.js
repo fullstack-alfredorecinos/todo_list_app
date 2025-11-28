@@ -1,15 +1,42 @@
-function validateRequest(req, res, next){
-    let numero = 10;
-    if (numero > 5){
-  
-        console.log("numero es mayor a 5, esta autorizado de continuar");
-        console.log(req);
+import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const validateRequest = (req, res, next) => {
+    const headerAuth = req.headers.authorization;
+    console.log(req.headers);
+    console.log(headerAuth);
+    if(!headerAuth){
+        return res.status(401).json({message: "No se proporcionó un token"});
+    }
+    const token = req.headers.authorization.split(" ")[1];
+    
+    try {
+        const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
+        req.user = verifyToken;
+        console.log(verifyToken);
         next();
-    }else {
-        return res.status(401).json({mensaje: "acceso denegado"});
+    }catch (error){
+        return res.status(401).json({message: "Token no válido"});
+    }
+};
+
+const validateRole = (rolesAuth) => {
+    return(req,res,next) => {
+        if(!req.user){
+          return res.status(401).json({message: "No se proporcionó un token"});
+        }
+
+        if(!rolesAuth.includes(req.user.rol)){
+            return res.status(403).json({message: "No tienes permisos para acceder a esta ruta"});
+        }
+        next();
+
     }
 }
 
 export default {
     validateRequest,
-}
+    validateRole
+};
