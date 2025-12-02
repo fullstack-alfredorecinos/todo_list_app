@@ -23,13 +23,14 @@ const validateRequest = (req, res, next) => {
 };
 
 const validateRole = (rolesAuth) => {
+
     return(req,res,next) => {
         if(!req.user){
-          return res.status(401).json({message: "No se proporcionó un token"});
+          return res.status(401).json({message: "No se proporcionó un usuario"});
         }
 
         if(!rolesAuth.includes(req.user.rol)){
-            return res.status(403).json({message: "No tienes permisos para acceder a esta ruta"});
+            return res.status(401).json({message: "No tienes permisos para acceder a esta ruta"});
         }
         next();
 

@@ -5,13 +5,12 @@ import validate from "../midlewares/validate.js";
 
 const router = Router();
 
-
-
 router.post("/login", userController.login);
 router.post("/", userController.creatUsers);
 router.use(validate.validateRequest);  //Middleware de la aplicación o policía que proteje las rutas
-router.put("/:id", userController.updateUsers);
-router.delete("/:id", userController.deleteUsers);
+router.get("/", validate.validateRole(["administrador"]), userController.getUsers);
+router.put("/:id", validate.validateRole(["administrador"]), userController.updateUsers);
+router.delete("/:id",validate.validateRole(["administrador"]), userController.deleteUsers);
 // router.post("/login", userController.login);
 
 export default router;
