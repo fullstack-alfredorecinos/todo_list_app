@@ -20,6 +20,7 @@ function App() {
       <LabelText texto="Nombre" color="red" clickAqui={clickAqui} />
       <LabelText texto="Apellido" color="blue" usuarioObj={usuarioObj} />
       <LabelText texto="Edad" color="green" clickAqui={clickAqui} />
+      <LabelText texto="Lista de numeros" color="yellow" listaNumeros={listaNumeros} />
 
       <button onClick={clickAqui}>Enviar</button>
     </>

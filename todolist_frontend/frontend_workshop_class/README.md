@@ -21,6 +21,5 @@ If you are developing a production application, we recommend using TypeScript wi
 -https://windsurf.com/
 -https://cursor.com/
 -https://redux-toolkit.js.org/
--https://chromewebstore.google.com/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd
 
 
