@@ -1,5 +1,3 @@
-import './App.css'
-// import { config } from './config.ts';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/login/Login.tsx';
 import Task from './components/task/Task.tsx';

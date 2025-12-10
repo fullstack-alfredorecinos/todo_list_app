@@ -1,3 +1,1 @@
-/**
- * Reducers y actions para autenticación
- */
+/* reducers y los accions para autenticacion */

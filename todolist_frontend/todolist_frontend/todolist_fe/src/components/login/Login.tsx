@@ -1,56 +1,51 @@
-// import React from 'react';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import Alert from '@mui/material/Alert';
-import { useState } from 'react';
+import TextField from "@mui/material/TextField"
+import Button from "@mui/material/Button"
+import Container from "@mui/material/Container"
+import Typography from "@mui/material/Typography"
+import Box from "@mui/material/Box"
+import Alert from "@mui/material/Alert"
+import type { CSSProperties } from "react"
+import { useState } from "react"
 
-const BoxStyles = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    // height: '100vh',
-    // backgroundColor: '#f5f5f5',
+const BoxStyles: CSSProperties = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    height: "100vh",
+    marginTop: "8px",
 }
 
-const Login = () => {
-    const [loading, setLoading] = useState(false);
+function Login() {
+    const [loading, setLoading] = useState(false)
     return (
         <Container maxWidth="xs">
             <Box sx={BoxStyles}>
-                <Typography variant="h4" gutterBottom>
-                    Login
-                </Typography>
-
-                <Box sx={{ mt: 2 }}>
+                <Typography variant="h4">Iniciar Sesión</Typography>
+                <Box sx={{ mt: 1 }}>
                     <TextField
+                        label="Email"
                         name="email"
-                        label="email"
-                        type="email"
                         variant="outlined"
                         fullWidth
-                        margin='normal' />
+                        margin="normal"
+                    />
                     <TextField
-                        label="Contraseña"
+                        label="Password"
                         name="password"
                         type="password"
                         variant="outlined"
                         fullWidth
-                        margin='normal' />
-
-                    <Button variant="contained" color="primary" type='submit' fullWidth>
-                        {loading ? 'Cargando...' : 'Iniciar Sesión'}
+                        margin="normal"
+                    />
+                    <Button variant="contained" color="primary" type="submit">
+                        {loading ? " Cargando..." : "Iniciar Sesión"}
                     </Button>
                 </Box>
 
-
-                <Alert severity="error">This is an error alert — check it out!</Alert>
             </Box>
         </Container>
-    );
-};
+    )
+}
 
-export default Login;
+export default Login

@@ -1,15 +1,7 @@
-import react from 'react'
+import React from 'react'
 
-interface NotificationProps {
-    message: string;
-}
-
-const Notification = ({ message }: NotificationProps) => {
+export default function Notification() {
     return (
-        <div className="notification">
-            {message}
-        </div>
-    );
-};
-
-export default Notification;
+        <h1>Notification</h1>
+    )
+}

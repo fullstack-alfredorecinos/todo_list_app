@@ -1,3 +1,1 @@
-/**
- * Reducers y actions para tareas
- */
+/* reducers y los accions para tareas */
