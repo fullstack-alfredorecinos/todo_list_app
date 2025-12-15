@@ -1,5 +1,5 @@
 import authService from "../services/auth.service";
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "reduxjs-toolkit";
 import type { LoginRequest } from "../interfaces/auth.interface.ts";
 
 const initialState = {
