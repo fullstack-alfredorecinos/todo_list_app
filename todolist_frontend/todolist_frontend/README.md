@@ -22,5 +22,13 @@ If you are developing a production application, we recommend using TypeScript wi
 -https://cursor.com/
 -https://redux-toolkit.js.org/
 -https://chromewebstore.google.com/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd
+-https://www.happyhues.co/palettes/9
+-https://github.com/axios/axios
+-https://mui.com/material-ui/customization/breakpoints/
+-https://www.happyhues.co/palettes/9
+-https://axios-http.com/es/docs/interceptors
 
+
+### Comandos
+- npm install axios
 
