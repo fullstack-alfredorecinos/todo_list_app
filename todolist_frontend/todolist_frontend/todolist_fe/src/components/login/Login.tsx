@@ -21,7 +21,7 @@ function Login() {
     return (
         <Container maxWidth="xs">
             <Box sx={BoxStyles}>
-                <Typography variant="h4">Iniciar Sesión</Typography>
+                <Typography variant="h4" color="primary" fontWeight="bold">Iniciar Sesión</Typography>
                 <Box sx={{ mt: 1 }}>
                     <TextField
                         label="Email"
@@ -38,7 +38,7 @@ function Login() {
                         fullWidth
                         margin="normal"
                     />
-                    <Button variant="contained" color="primary" type="submit">
+                    <Button variant="contained" color="primary" fullWidth type="submit">
                         {loading ? " Cargando..." : "Iniciar Sesión"}
                     </Button>
                 </Box>
