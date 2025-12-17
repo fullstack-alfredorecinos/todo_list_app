@@ -1,10 +1,11 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Login from './components/login/Login.tsx';
-import Task from './components/task/Task.tsx';
-import NotFound from './components/commons/NotFound.tsx';
-import type { CSSProperties } from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Login from "./components/login/Login"
+import Task from "./components/task/Task"
+import NotFound from "./components/commons/NotFound"
+import type { CSSProperties } from "react"
 
-const FooterStyles: CSSProperties = {
+
+const footerStyles: CSSProperties = {
   position: 'fixed',
   bottom: 0,
   left: 0,
@@ -14,20 +15,19 @@ const FooterStyles: CSSProperties = {
   textAlign: 'center',
 }
 
-
 function App() {
-
   return (
     <>
       <Router>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/task" element={<Task />} />
-          <Route path="/not-found" element={<NotFound />} />
-          <Route path="*" element={<Navigate to="/not-found" />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
-      <footer style={FooterStyles}><p>App To do List Full Stack 2025</p></footer>
+      <footer style={footerStyles}>
+        <p>App de todolist Fullstack 2025</p>
+      </footer>
     </>
   )
 }

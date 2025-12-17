@@ -1,15 +1,16 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
-// import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { ThemeProvider } from '@mui/material/styles';
-// import temaPersonalizadoAzul from './themes/theme2.ts';
-import temaPersonalizadoNaranja from './themes/theme1.ts';
-
+import temaPersonalizadoAzul from './themes/theme1';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
 
 
 createRoot(document.getElementById('root')!).render(
-  <ThemeProvider theme={temaPersonalizadoNaranja}>
-    <App />
-  </ThemeProvider>
-);
+  <Provider store={store}>
+    <ThemeProvider theme={temaPersonalizadoAzul}>
+      <App />
+    </ThemeProvider>
+  </Provider>
+)

@@ -1,5 +1,5 @@
-import type { LoginRequest, LoginResponse } from "../interfaces/auth.interface.ts";
-import { axiosInstance } from "./axios.config.ts";
+import type { LoginRequest, LoginResponse } from "../interfaces/auth.interface";
+import { axiosInstance } from "./axios.config";
 
 /*
 Login
@@ -10,8 +10,8 @@ deleteUser */
 
 const authService = {
     login: async (credentials: LoginRequest): Promise<LoginResponse> => {
-        const response = await axiosInstance.post("/user/login", credentials);
-        return response.data;
+        const response = await axiosInstance.post("/user/login", credentials)
+        return response.data
     },
     logout: async () => {
 
@@ -27,4 +27,5 @@ const authService = {
     },
 }
 
-export default authService;
+
+export default authService

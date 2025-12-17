@@ -38,14 +38,14 @@ export default function Task() {
                         xl: theme.custom?.containerMaxWidth?.xl,
                         xxl: theme.custom?.containerMaxWidth?.xxl
                     },
-                    background: {
-                        xs: '#db3d55ff', // Rojo claro para XS (0-639px)
-                        sm: '#cb8920ff', // Naranja claro para SM (640-767px)
-                        md: '#52d45dff', // Verde claro para MD (768-1023px)
-                        lg: '#258cd6ff', // Azul claro para LG (1024-1279px)
-                        xl: '#b22ac7ff', // Púrpura claro para XL (1280-1439px)
-                        xxl: '#50a953ff', // Verde azulado para XXL (1440px+) - Breakpoint personalizado
-                    }
+                    // background: {
+                    //     xs: '#db3d55ff', // Rojo claro para XS (0-639px)
+                    //     sm: '#cb8920ff', // Naranja claro para SM (640-767px)
+                    //     md: '#52d45dff', // Verde claro para MD (768-1023px)
+                    //     lg: '#258cd6ff', // Azul claro para LG (1024-1279px)
+                    //     xl: '#b22ac7ff', // Púrpura claro para XL (1280-1439px)
+                    //     xxl: '#50a953ff', // Verde azulado para XXL (1440px+) - Breakpoint personalizado
+                    // }
                 }}
             >
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mt: 4, mb: 2 }}>
